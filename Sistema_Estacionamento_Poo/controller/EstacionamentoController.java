@@ -7,10 +7,8 @@ public class EstacionamentoController {
     // Acesso à instância única do model (Singleton)
     private Estacionamento est = Estacionamento.getInstancia();
 
-    /**
-     * RF05: Registrar Entrada
-     * Aplica o bloqueio se estiver lotado.
-     */
+     // RF05: Registrar Entrada Aplica o bloqueio se estiver lotado.
+
     public String registrarEntrada(String nome, String cpf, String placa, String tipo) {
         // Regra de Negócio: Bloqueio de Estacionamento Lotado
         if (!est.temVaga()) {
@@ -32,9 +30,8 @@ public class EstacionamentoController {
         return "Entrada liberada para a placa: " + placa;
     }
 
-    /**
-     * Lógica de Pagamento e Liberação de Saída
-     */
+ // Lógica de Pagamento e Liberação de Saída
+
     public String processarSaida(String placa, FormaPagamento forma) {
         // Busca o registro que não tem data de saída (ainda está no pátio)
         RegistroAcesso registro = est.getRegistros().stream()
