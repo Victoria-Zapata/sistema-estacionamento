@@ -19,6 +19,9 @@ public class RegistroAcesso {
 	public LocalDateTime getDataHoraEntrada() {
 		return dataHoraEntrada;
 	}
+	public void setDataHoraEntrada(LocalDateTime dataHoraEntrada) {
+		this.dataHoraEntrada = dataHoraEntrada;
+	}
 	public void setDataHoraSaida(LocalDateTime dataHoraSaida) {
 		this.dataHoraSaida = dataHoraSaida;
 	}
