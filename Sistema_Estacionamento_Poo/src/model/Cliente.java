@@ -5,7 +5,7 @@ import java.util.List;
 public abstract class Cliente extends Pessoa{
 	private String telefone;
 	private boolean ativo;
-	private List<Veiculo> veiculos = new ArrayList<>();
+	private List<Veiculo> veiculos = new ArrayList<>(); //um cliente pode ter varios veiculos
 	
 	public List<Veiculo> getVeiculos() {
 	    return veiculos;
@@ -31,6 +31,7 @@ public abstract class Cliente extends Pessoa{
 	
 	public void adicionarVeiculo(Veiculo v) {
 	    if (v != null) {
+	    	//tanto o cliente acessa seus veiculos quanto o veiculo conheça seu proprietario.
 	        this.veiculos.add(v);
 	        v.setProprietario(this);
 	    }

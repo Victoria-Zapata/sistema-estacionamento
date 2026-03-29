@@ -4,7 +4,7 @@ public class Veiculo {
 	private String placa;
 	private String modelo;
 	private String cor;
-	private Cliente proprietario;
+	private Cliente proprietario; //fecha a relacao bidirecional
 	
 	public Cliente getProprietario() {
 		return proprietario;

@@ -5,7 +5,6 @@ public class Pagamento {
 	private FormaPagamento formaPagamento;
 	private double valorTotal;
 	private LocalDateTime dataHora;
-	
 	private Cliente pagador;
 	
 	public Cliente getPagador() {

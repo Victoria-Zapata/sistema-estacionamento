@@ -94,7 +94,7 @@ public class Main {
         controller.registrarEntrada("Maria Rotativo", "222.222.222-22", "XYZ-9999", "TEMP");
         System.out.println("-> João (FIXO) e Maria (TEMP) registrados com sucesso.");
 
-        // Simulação de tempo (Retroagir 2 horas para teste)
+        // Simulação de tempo 
         System.out.println("\n[DEMO] Simulando passagem de 120 minutos para os dois veículos...");
         java.time.LocalDateTime duasHorasAtras = java.time.LocalDateTime.now().minusHours(2);
         for (model.RegistroAcesso r : est.getRegistros()) {

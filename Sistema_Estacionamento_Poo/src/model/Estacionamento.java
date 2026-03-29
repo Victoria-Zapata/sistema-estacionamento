@@ -10,7 +10,7 @@ public class Estacionamento {
 	private int vagasOcupadas;
 	private double valorHoraRotativo;
 	
-	// Listas para gerenciar o sistema (As setas do diagrama)
+	// Listas para gerenciar o sistema
 	private List<Pagamento> pagamentos = new ArrayList<>();
     private List<Cliente> clientes;
     private List<Funcionario> funcionarios;
@@ -82,19 +82,16 @@ public class Estacionamento {
 	    vagasOcupadas--;
 	}
 	
-	// --- MÉTODOS DE GERENCIAMENTO (Seguindo o SOLID) ---
+	//metodos de gerenciamento
 
-    // Para o RF16/RF17 (Login)
     public void adicionarFuncionario(Funcionario f) {
         this.funcionarios.add(f);
     }
 
-    // Para o RF09 (Cadastro de Mensalistas)
     public void adicionarCliente(Cliente c) {
         this.clientes.add(c);
     }
 
-    // Para o RF05 (Registrar entrada)
     public void adicionarRegistro(RegistroAcesso r) {
         this.registros.add(r);
     }
